@@ -74,7 +74,7 @@ async function liquidityExamples(sender: string, exampleType: number) {
   const immutables = await getPoolImmutables();
   const state = await getPoolState();
   const DAI = new Token(1, immutables.token0, 18, "DAI", "Stablecoin");
-  const USDC = new Token(1, immutables.token1, 18, "USDC", "USD Coin");
+  const USDC = new Token(1, immutables.token1, 6, "USDC", "USD Coin");
   const block = await provider.getBlock(provider.getBlockNumber());
   const deadline = block.timestamp + 200;
 
